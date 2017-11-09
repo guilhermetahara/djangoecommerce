@@ -25,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = '2!hytjj$3q*bke@9@&+2eh(^h2a9)pq(s!l&8wzjae8ff5#y=k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False c
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'catalog',
 ]
 
 MIDDLEWARE = [
