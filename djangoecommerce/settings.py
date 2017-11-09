@@ -25,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = '2!hytjj$3q*bke@9@&+2eh(^h2a9)pq(s!l&8wzjae8ff5#y=k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False c
 
 ALLOWED_HOSTS = []
 
@@ -130,3 +130,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
