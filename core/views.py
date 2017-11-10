@@ -1,27 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from catalog.models import Category
+
 def index(request):
 
-	texto = ['Este é um e-commerce programado em python 3 com framework Django!']
-	context = {
-		'title' : 'Django e-commerce',
-		'text' : texto
-	}
-	return render(request, 'index.html', context)
+	return render(request, 'index.html')
 
-def contato(request):
+def contact(request):
 	
 	return render(request, 'contact.html')
 
 
-def produto(request):
-
-	
-	return render(request, 'product.html')
 
 
-def lista_produto(request):
 
-	
-	return render(request, 'product_list.html')

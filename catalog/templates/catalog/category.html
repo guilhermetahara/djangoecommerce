@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{category}}{% endblock %}
+
+
+{% block content %}
+<div class="page-header">
+    <h1>{{category}}</h1>
+</div>
+<div class="row">
+    {%for product in products%}
+        <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <a href="#">
+                <img src="http://placehold.it/350x250" alt="" />
+            </a>
+            <div class="caption">
+                <h3>{{product.name}}</h3>
+                <br>
+                <p>Categoria: {{product.category}}</p>
+                <br>
+                <p>R$ {{product.price}}</p>
+                <p><a href="#" class="btn btn-success" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+</div>
+{% endblock %}
